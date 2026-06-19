@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daten – Klimawandel & Klimagerechtigkeit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Karten-Bereich */
+    #map-container {
+      position: relative;
+      width: 100%;
+      margin: 1.5rem 0 0.5rem;
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      background: var(--col-surface);
+      padding: 1rem 0;
+    }
+
+    #map-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .country-highlight {
+      fill: var(--col-accent);
+      stroke: var(--col-nav);
+      stroke-width: 0.8px;
+      cursor: pointer;
+      transition: fill 0.2s;
+    }
+
+    .country-highlight:hover { fill: var(--col-terra); }
+    .country-highlight.active { fill: var(--col-nav); }
+
+    .land {
+      fill: var(--col-accent-lt);
+      stroke: var(--col-border);
+      stroke-width: 0.3px;
+    }
+
+    /* Popup-Overlay */
+    #map-overlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 58, 47, 0.5);
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      border-radius: var(--radius);
+    }
+
+    #map-overlay.visible { display: flex; }
+
+    #map-popup {
+      background: var(--col-surface);
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      max-width: 360px;
+      width: 90%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    #map-popup-close {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.6rem;
+      background: var(--col-surface);
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--col-muted);
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    #map-popup-close:hover { color: var(--col-nav); }
+
+    #map-popup-frame {
+      display: block;
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    .data-map-hint {
+      text-align: center;
+      font-size: 13px;
+      color: var(--col-muted);
+      margin: 0.75rem 0 2.5rem;
+    }
+
+    @media (max-width: 620px) {
+      #map-popup-frame { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ══════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Projekt</a></li>
+        <li><a href="stationen.html">Stationen</a></li>
+        <li><a href="daten.html">Daten</a></li>
+        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="fazit.html">Fazit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ SEITENKOPF ══════════════════════════════════════════ -->
+  <header class="page-header">
+    <p class="page-header__eyebrow">Kapitel 3 von 5</p>
+    <h1 class="page-header__title">Daten im Vergleich</h1>
+    <p class="page-header__subtitle">Drei Länder, drei sehr unterschiedliche Betroffenheiten vom Klimawandel.</p>
+  </header>
+
+  <!-- ═══ HAUPTINHALT ═════════════════════════════════════════ -->
+  <main class="page-content">
+
+    <p class="lead">Klimawandel betrifft nicht jedes Land gleich. Klickt auf Deutschland, Russland, Bangladesch, Südafrika oder Mexiko, um mehr über die jeweiligen Daten, Auswirkungen und Besonderheiten zu erfahren.</p>
+
+    <div id="map-container">
+      <svg id="map-svg" viewBox="0 0 960 500" xmlns="http://www.w3.org/2000/svg">
+        <g id="countries"></g>
+      </svg>
+
+      <div id="map-overlay">
+        <div id="map-popup">
+          <button id="map-popup-close" aria-label="Schließen">×</button>
+          <iframe id="map-popup-frame" title=""></iframe>
+        </div>
+      </div>
+    </div>
+    <p class="data-map-hint">Klickt auf eines der markierten Länder, um die Infos zu öffnen.</p>
+
+  </main>
+
+  <!-- ═══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>Profilkurs Mathematik · Toni-Sender-Oberstufe Frankfurt · 2025/26</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // Anklickbare Länder: ISO-3166-1-numerisch-Code → Name + eigene Popup-Datei
+    const laenderData = {
+      276: { name: 'Deutschland', popupFile: 'laender/deutschland.html' },
+      643: { name: 'Russland',    popupFile: 'laender/russland.html' },
+      50:  { name: 'Bangladesch', popupFile: 'laender/bangladesch.html' },
+      710: { name: 'Südafrika',   popupFile: 'laender/suedafrika.html' },
+      484: { name: 'Mexiko',      popupFile: 'laender/mexiko.html' }
+    };
+    const targetIds = new Set(Object.keys(laenderData).map(Number));
+
+    const projection = d3.geoNaturalEarth1()
+      .scale(153)
+      .translate([480, 250]);
+
+    const path = d3.geoPath().projection(projection);
+    const svg = d3.select('#map-svg g');
+
+    const overlay = document.getElementById('map-overlay');
+    const popupFrame = document.getElementById('map-popup-frame');
+    const closeBtn = document.getElementById('map-popup-close');
+
+    function openPopup(info) {
+      popupFrame.src = info.popupFile;
+      popupFrame.title = info.name;
+      overlay.classList.add('visible');
+    }
+
+    function closePopup() {
+      overlay.classList.remove('visible');
+      d3.selectAll('.country-highlight').classed('active', false);
+    }
+
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(r => r.json())
+      .then(world => {
+        const featureCollection = topojson.feature(world, world.objects.countries);
+
+        svg.selectAll('path')
+          .data(featureCollection.features)
+          .enter()
+          .append('path')
+          .attr('d', path)
+          .attr('class', d => targetIds.has(+d.id) ? 'country-highlight' : 'land')
+          .on('click', function (event, d) {
+            const id = +d.id;
+            if (!targetIds.has(id)) return;
+            const info = laenderData[id];
+            d3.selectAll('.country-highlight').classed('active', false);
+            d3.select(this).classed('active', true);
+            openPopup(info);
+          });
+      });
+
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === this) closePopup();
+    });
+  </script>
+</body>
+</html>
