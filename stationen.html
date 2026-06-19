@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stationen – Klimawandel & Klimagerechtigkeit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Station-spezifische Stile */
+    .station-block {
+      margin: 3rem 0;
+    }
+
+    .station-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--col-accent-lt);
+    }
+
+    .station-header__num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--col-terra);
+      white-space: nowrap;
+    }
+
+    .station-header__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--col-nav);
+      margin: 0;
+    }
+
+    .station-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 13px;
+      color: var(--col-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .station-meta span::before {
+      content: '·';
+      margin-right: 0.4rem;
+      color: var(--col-accent);
+    }
+
+    .station-meta span:first-child::before {
+      content: '';
+      margin-right: 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    @media (max-width: 620px) {
+      .two-col { grid-template-columns: 1fr; }
+      .station-header { flex-direction: column; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ══════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Projekt</a></li>
+        <li><a href="stationen.html">Stationen</a></li>
+        <li><a href="daten.html">Daten</a></li>
+        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="fazit.html">Fazit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ SEITENKOPF ══════════════════════════════════════════ -->
+  <header class="page-header">
+    <p class="page-header__eyebrow">Kapitel 2 von 5</p>
+    <h1 class="page-header__title">Unsere Stationen</h1>
+    <p class="page-header__subtitle">Drei Besuche, drei Perspektiven auf Klimawandel und Klimagerechtigkeit.</p>
+  </header>
+
+  <!-- ═══ HAUPTINHALT ═════════════════════════════════════════ -->
+  <main class="page-content">
+
+    <p class="lead">Im Laufe des Projektjahres haben wir drei Orte besucht, die jeweils einen eigenen Zugang zum Thema Klimawandel ermöglichten – von Messdaten über Wissenschaftskommunikation bis hin zu konkreten Handlungsperspektiven.</p>
+
+
+    <!-- ─── Station 1: DWD ────────────────────────────────── -->
+    <div class="station-block" id="dwd">
+      <div class="station-header">
+        <span class="station-header__num">Station 01</span>
+        <h2 class="station-header__title">Deutscher Wetterdienst (DWD)</h2>
+      </div>
+
+      <div class="station-meta">
+        <span>Offenbach am Main</span>
+        <span>[Datum einfügen]</span>
+        <span>[Dauer einfügen, z.B. Halbtag]</span>
+      </div>
+
+      <!-- Foto -->
+      <div class="img-placeholder">Foto vom DWD-Besuch einfügen</div>
+
+      <!-- Beschreibung -->
+      <p>Hier kommt eine Beschreibung des Besuchs: Was haben wir gesehen, wer hat uns geführt, was war das Programm?</p>
+
+      <!-- Zwei-Spalten: Was wir gelernt haben + Zitat -->
+      <div class="two-col">
+        <div>
+          <h3>Was wir gelernt haben</h3>
+          <p>Hier können die Schülerinnen und Schüler beschreiben, welche Erkenntnisse sie mitgenommen haben – z.B. über Messmethoden, Klimamodelle oder konkrete Wetterdaten für Hessen.</p>
+        </div>
+        <div>
+          <blockquote>
+            <p>„Hier ein Zitat von jemandem aus dem Kurs oder von einem DWD-Mitarbeiter."</p>
+            <cite>— Name, Klasse / Funktion</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="infobox">
+        <strong>Hintergrund:</strong> Der Deutsche Wetterdienst (DWD) ist der nationale meteorologische Dienst Deutschlands und betreibt eines der dichtesten Messnetze Europas. Hier können weiterführende Informationen oder Links zu DWD-Daten stehen.
+      </div>
+    </div>
+
+    <hr class="section-rule">
+
+
+    <!-- ─── Station 2: EXPERIMENTA ───────────────────────── -->
+    <div class="station-block" id="experimenta">
+      <div class="station-header">
+        <span class="station-header__num">Station 02</span>
+        <h2 class="station-header__title">EXPERIMENTA Frankfurt</h2>
+      </div>
+
+      <div class="station-meta">
+        <span>Frankfurt am Main</span>
+        <span>[Datum einfügen]</span>
+        <span>[Dauer einfügen]</span>
+      </div>
+
+      <div class="img-placeholder">Foto von der EXPERIMENTA einfügen</div>
+
+      <p>Hier kommt eine Beschreibung des Besuchs: Welche Ausstellungsbereiche haben wir erkundet, welche Experimente oder Exponate standen im Mittelpunkt?</p>
+
+      <div class="two-col">
+        <div>
+          <h3>Was wir gelernt haben</h3>
+          <p>Hier beschreiben die Schülerinnen und Schüler, was sie in der EXPERIMENTA mitgenommen haben – z.B. interaktive Klimaexperimente, Treibhauseffekt-Demonstrationen oder Energiewendeausstellung.</p>
+        </div>
+        <div>
+          <blockquote>
+            <p>„Hier ein Zitat von jemandem aus dem Kurs."</p>
+            <cite>— Name, Klasse</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Optional: Karten für einzelne Highlights -->
+      <h3>Highlights</h3>
+      <div class="card-grid">
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-rule">
+
+
+    <!-- ─── Station 3: basa eV ───────────────────────────── -->
+    <div class="station-block" id="basa">
+      <div class="station-header">
+        <span class="station-header__num">Station 03</span>
+        <h2 class="station-header__title">basa eV · Neu-Anspach</h2>
+      </div>
+
+      <div class="station-meta">
+        <span>Neu-Anspach (Taunus)</span>
+        <span>[Datum einfügen]</span>
+        <span>Mehrtägiger Workshop</span>
+      </div>
+
+      <div class="img-placeholder">Foto vom basa-Aufenthalt einfügen (Gruppe, Gelände, Workshop)</div>
+
+      <p>Hier kommt eine Beschreibung des mehrtägigen Aufenthalts bei basa eV: Wo haben wir gewohnt, was war das Programm, welche Themen haben wir bearbeitet?</p>
+
+      <div class="two-col">
+        <div>
+          <h3>Workshops &amp; Programm</h3>
+          <p>Hier beschreiben die Schülerinnen und Schüler, welche Workshops stattfanden – z.B. Klimagerechtigkeit im globalen Kontext, Handlungsperspektiven, Gruppenarbeiten.</p>
+        </div>
+        <div>
+          <h3>Sozialer Landwirtschaftsbetrieb</h3>
+          <p>Hier kann der Besuch des landwirtschaftlichen Betriebs beschrieben werden – was dort produziert wird, wie Nachhaltigkeit dort gelebt wird und was die Schüler mitgenommen haben.</p>
+        </div>
+      </div>
+
+      <div class="img-placeholder">Zweites Foto – z.B. vom Hof oder einer Gruppenaktivität</div>
+
+      <blockquote>
+        <p>„Hier ein längeres Zitat, das den Aufenthalt bei basa eV zusammenfasst – aus der Perspektive eines Schülers oder einer Schülerin."</p>
+        <cite>— Name, Klasse</cite>
+      </blockquote>
+
+      <div class="infobox">
+        <strong>Über basa eV:</strong> Hier kann ein kurzer Satz zu basa eV stehen – was der Verein macht, was sein Bildungsauftrag ist und wie er mit dem Thema Klimagerechtigkeit zusammenhängt.
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>Profilkurs Mathematik · Toni-Sender-Oberstufe Frankfurt · 2025/26</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

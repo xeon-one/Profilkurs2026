@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekt – Klimawandel & Klimagerechtigkeit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero-Bereich nur für die Startseite */
+    .hero {
+      background: var(--col-nav);
+      color: #fff;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .hero__eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--col-accent-lt);
+      margin-bottom: 1rem;
+    }
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero__sub {
+      font-size: 17px;
+      color: var(--col-footer-txt);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    .hero__meta {
+      font-size: 13px;
+      color: var(--col-accent-lt);
+      opacity: 0.75;
+    }
+    /* Kapitel-Übersicht */
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .chapter-card {
+      background: var(--col-surface);
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .chapter-card:hover {
+      border-color: var(--col-accent);
+      box-shadow: 0 2px 8px rgba(74,124,89,0.12);
+    }
+    .chapter-card__num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--col-terra);
+      margin-bottom: 0.35rem;
+    }
+    .chapter-card__name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--col-nav);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Projekt</a></li>
+        <li><a href="stationen.html">Stationen</a></li>
+        <li><a href="daten.html">Daten</a></li>
+        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="fazit.html">Fazit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="hero__eyebrow">Profilkurs Mathematik · TSO Frankfurt · 2025/26</p>
+    <h1 class="hero__title">Klimawandel &amp;<br>Klimagerechtigkeit</h1>
+    <p class="hero__sub">Dokumentation unseres Profilkursprojekts – Besuche, Workshops, Daten und unsere eigene Kampagne.</p>
+    <p class="hero__meta">5 Kapitel · [Anzahl] Schülerinnen und Schüler · [Zeitraum]</p>
+  </div>
+
+  <main class="page-content">
+
+    <p class="lead">Auf diesen Seiten dokumentieren wir unser Projektjahr: wohin wir gefahren sind, was wir gelernt haben und was wir daraus gemacht haben.</p>
+
+    <h2>Kapitelübersicht</h2>
+    <div class="chapter-grid">
+      <a class="chapter-card" href="index.html">
+        <p class="chapter-card__num">Kapitel 1</p>
+        <p class="chapter-card__name">Projekt</p>
+      </a>
+      <a class="chapter-card" href="stationen.html">
+        <p class="chapter-card__num">Kapitel 2</p>
+        <p class="chapter-card__name">Stationen</p>
+      </a>
+      <a class="chapter-card" href="daten.html">
+        <p class="chapter-card__num">Kapitel 3</p>
+        <p class="chapter-card__name">Daten</p>
+      </a>
+      <a class="chapter-card" href="kampagne.html">
+        <p class="chapter-card__num">Kapitel 4</p>
+        <p class="chapter-card__name">Kampagne</p>
+      </a>
+      <a class="chapter-card" href="fazit.html">
+        <p class="chapter-card__num">Kapitel 5</p>
+        <p class="chapter-card__name">Fazit</p>
+      </a>
+    </div>
+
+    <hr class="section-rule">
+
+    <h2>Über das Projekt</h2>
+    <p>Hier kommt eine kurze Projektbeschreibung: Warum dieses Thema, was war das Ziel, wer war beteiligt?</p>
+
+    <div class="img-placeholder">Gruppenfoto oder Titelbild einfügen</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Profilkurs Mathematik · Toni-Sender-Oberstufe Frankfurt · 2025/26</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
