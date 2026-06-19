@@ -22,6 +22,34 @@
       margin-bottom: 0.75rem;
     }
     .img-placeholder { height: 130px; margin: 0.75rem 0; font-size: 12px; }
+    h3.popup-h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--col-accent);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin: 0.5rem 0 1rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid var(--col-border);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .data-table th {
+      background: var(--col-accent-lt);
+      color: var(--col-nav);
+      font-weight: 600;
+    }
+    ul.popup-list { margin: 0 0 1rem 1.1rem; }
+    ul.popup-list li { margin-bottom: 0.3rem; }
+    .quellen-list { margin: 0 0 1rem 1.1rem; font-size: 12.5px; }
+    .quellen-list a { word-break: break-all; }
   </style>
 </head>
 <body>
@@ -32,12 +60,110 @@
 
   <div class="img-placeholder">Bild zu Deutschland einfügen</div>
 
-  <p>Hier könnt ihr Text zu Klimadaten und Auswirkungen des Klimawandels in Deutschland einfügen – z.B. Temperaturentwicklung, Extremwetter, politische Maßnahmen.</p>
-
-  <!-- Beispiel: Infobox für einzelne Kennzahlen -->
+  <h3 class="popup-h3">Temperaturveränderung</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Jahr</th><th>Temperaturanomalie gegenüber 1961–1990</th><th>Bedeutung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2021</td><td>+1,3 °C</td><td>Durchschnittstemperatur lag 1,3 °C über dem Referenzwert</td></tr>
+      <tr><td>2022</td><td>+2,3 °C</td><td>Deutlich wärmer als der Referenzzeitraum</td></tr>
+      <tr><td>2023</td><td>+2,5 °C</td><td>Eines der wärmsten Jahre in Deutschland</td></tr>
+      <tr><td>2024</td><td>+2,3 °C</td><td>Weiterhin deutlich über dem langjährigen Mittel</td></tr>
+      <tr><td>2025</td><td>+1,8 °C</td><td>Wärmer als der Referenzzeitraum</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Alle Werte sind positiv – alle Jahre waren wärmer als der Durchschnitt 1961–1990</li>
+    <li>Die Anomalien liegen zwischen +1,3 °C und +2,5 °C</li>
+    <li>Klarer Erwärmungstrend in Deutschland sichtbar</li>
+    <li>Besonders 2022 bis 2024 waren außergewöhnlich warme Jahre</li>
+  </ul>
   <div class="infobox">
-    <strong>Kennzahl:</strong> Hier könnt ihr z.B. eine Temperaturänderung oder einen CO₂-Wert einfügen.
+    📌 <strong>Wichtigste Erkenntnis:</strong> Deutschland erwärmt sich stärker als der globale Durchschnitt. Dies ist typisch für Landflächen, die sich schneller erwärmen als Ozeane.
   </div>
+
+  <h3 class="popup-h3">CO₂-Emissionen in Deutschland</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Kennzahl</th><th>Wert</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Gesamte CO₂-Emissionen pro Jahr</td><td>ca. 580 Mio. Tonnen CO₂</td></tr>
+      <tr><td>CO₂-Emissionen pro Kopf</td><td>ca. 7 Tonnen CO₂ pro Person und Jahr</td></tr>
+      <tr><td>Einwohnerzahl</td><td>ca. 84 Mio. Menschen</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Kurze Erklärung:</strong> Die Gesamtemissionen geben an, wie viel CO₂ in Deutschland insgesamt innerhalb eines Jahres ausgestoßen wird, durch Verkehr, Industrie, Energieerzeugung, Gebäude und andere Bereiche. Die Emissionen pro Kopf teilen diese Gesamtmenge durch die Einwohnerzahl. Dadurch lässt sich der durchschnittliche CO₂-Ausstoß einer Person in Deutschland mit dem anderer Länder vergleichen.</p>
+
+  <ul class="popup-list">
+    <li>Der weltweite Durchschnitt liegt bei etwa 5 Tonnen CO₂ pro Kopf und Jahr</li>
+    <li>Deutschland liegt mit rund 7 Tonnen pro Kopf deutlich darüber</li>
+    <li>In den letzten Jahrzehnten sind die deutschen Emissionen deutlich gesunken</li>
+    <li>Hauptquellen: Verkehr, Industrie, Energieerzeugung, Gebäude</li>
+    <li>Ausbau erneuerbarer Energien und effizientere Technologien zeigen Wirkung</li>
+  </ul>
+
+  <div class="infobox">
+    <strong>Merksatz:</strong> Deutschland verursacht insgesamt rund 580 Millionen Tonnen CO₂ pro Jahr. Das entspricht durchschnittlich etwa 7 Tonnen CO₂ je Einwohner und Jahr.
+  </div>
+
+  <h3 class="popup-h3">Häufigkeit/Intensität von Extremwetterereignissen</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Extremwetterart</th><th>Vor 50 Jahren</th><th>Heute</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Hitzewellen</td><td>selten, meist wenige Tage</td><td>deutlich häufiger, länger und intensiver</td></tr>
+      <tr><td>Starkregen</td><td>lokal, aber seltener</td><td>häufiger und oft mit größeren Regenmengen</td></tr>
+      <tr><td>Hochwasser durch Starkregen</td><td>vereinzelt</td><td>erhöhtes Risiko durch heftigere Niederschläge</td></tr>
+      <tr><td>Dürreperioden</td><td>gelegentlich</td><td>häufiger und länger anhaltend</td></tr>
+      <tr><td>Strenge Frostperioden</td><td>relativ häufig</td><td>deutlich seltener</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Hitzewellen nehmen stark zu – besonders in städtischen Gebieten</li>
+    <li>Starkregen führt häufiger zu lokalem Hochwasser (z. B. Ahrtal 2021)</li>
+    <li>Dürren belasten Landwirtschaft und Wälder zunehmend</li>
+    <li>Strenge Frostperioden werden seltener – ein direktes Zeichen der Erwärmung</li>
+  </ul>
+
+  <div class="infobox">
+    💡 <strong>Kurzfazit Deutschland:</strong><br>
+    🌡️ Starke Erwärmung (+1,3 bis +2,5 °C) – über dem globalen Mittel<br>
+    🌪 Hitzewellen, Hochwasser und Dürren nehmen zu<br>
+    🏭 Hohe Pro-Kopf-Emissionen (~7 t), aber sinkend<br>
+    📉 Emissionsreduktion durch Energiewende auf gutem Weg
+  </div>
+
+  <h3 class="popup-h3">Klimagerechtigkeit in Deutschland</h3>
+
+  <p><strong>Definition:</strong> Bedeutet, dass Ursachen, Folgen und Kosten des Klimawandels fair verteilt werden. Sie betrifft verschiedene Länder, soziale Gruppen und Generationen.</p>
+
+  <p><strong>Warum ist Klimagerechtigkeit wichtig?</strong></p>
+  <ul class="popup-list">
+    <li>Menschen mit wenig Geld sind oft stärker von Umweltproblemen betroffen.</li>
+    <li>Sie leben häufiger an lauten Straßen mit schlechter Luft.</li>
+    <li>Klimaschutzmaßnahmen wie der CO₂-Preis können Energie und Kraftstoffe teurer machen.</li>
+    <li>Deshalb sollen Menschen mit geringem Einkommen unterstützt werden.</li>
+    <li>Wer viel CO₂ verursacht, soll mehr Verantwortung übernehmen (Verursacherprinzip).</li>
+    <li>Auch zukünftige Generationen sollen vor den Folgen des Klimawandels geschützt werden.</li>
+    <li>Deutschland hat wegen seiner hohen Emissionen eine besondere Verantwortung.</li>
+    <li>Deutschland soll seine Emissionen senken und ärmere Länder unterstützen.</li>
+  </ul>
+
+  <p><strong>Fazit:</strong> Klimaschutz soll fair für alle Menschen sein. Deutschland macht Fortschritte, aber vollständige Klimagerechtigkeit ist noch nicht erreicht.</p>
+
+  <p><strong>Bundes-Klimaschutzgesetz</strong></p>
+
+  <p><strong>Quellen</strong></p>
+  <ul class="quellen-list">
+    <li><a href="https://www.bundesumweltministerium.de" target="_blank" rel="noopener">https://www.bundesumweltministerium.de</a></li>
+    <li><a href="https://www.duh.de/" target="_blank" rel="noopener">https://www.duh.de/</a></li>
+    <li><a href="https://klimaliste.org/" target="_blank" rel="noopener">https://klimaliste.org/</a></li>
+    <li><a href="https://www.die-linke.de/" target="_blank" rel="noopener">https://www.die-linke.de/</a></li>
+  </ul>
 
 </body>
 </html>

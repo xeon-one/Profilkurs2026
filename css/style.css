@@ -237,6 +237,15 @@ hr.section-rule {
   margin: 1.5rem 0;
 }
 
+/* --- Organisations-Logo (z.B. Partner/Veranstalter) ---------- */
+.org-logo {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.25rem;
+}
+
 /* --- Foto-Galerie mit Bildunterschriften --------------------- */
 figure.photo {
   margin: 1.5rem 0;
@@ -245,7 +254,8 @@ figure.photo {
 figure.photo img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 440px;
+  object-fit: cover;
   border-radius: var(--radius);
 }
 
@@ -279,7 +289,7 @@ figure.photo-pair {
 
 .photo-pair__imgs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.75rem;
 }
 
@@ -307,6 +317,51 @@ figure.photo-pair {
   .photo-grid img { height: 180px; }
   .photo-pair__imgs { grid-template-columns: 1fr; }
   .photo-pair__legend { columns: 1; }
+  figure.photo img { max-height: 300px; }
+}
+
+/* --- Galerie: Mosaik (ein großes Hauptbild + vier kleinere,    */
+/*     Ecken facettiert statt gerader Trennlinien) -------------- */
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 150px 150px;
+  grid-template-areas:
+    "a b c"
+    "a d e";
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.gallery-mosaic figure {
+  margin: 0;
+  height: 100%;
+  background: var(--col-accent-lt);
+  clip-path: polygon(18% 0%, 82% 0%, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0% 82%, 0% 18%);
+}
+
+.gallery-mosaic figure:nth-child(1) { grid-area: a; }
+.gallery-mosaic figure:nth-child(2) { grid-area: b; }
+.gallery-mosaic figure:nth-child(3) { grid-area: c; }
+.gallery-mosaic figure:nth-child(4) { grid-area: d; }
+.gallery-mosaic figure:nth-child(5) { grid-area: e; }
+
+.gallery-mosaic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 620px) {
+  .gallery-mosaic {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 170px 120px 120px;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e";
+  }
 }
 
 /* --- Zitat-Block ------------------------------------------- */

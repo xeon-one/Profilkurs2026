@@ -68,6 +68,16 @@
       .two-col { grid-template-columns: 1fr; }
       .station-header { flex-direction: column; gap: 0.25rem; }
     }
+
+    .station-header__title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .station-header__title a:hover {
+      color: var(--col-terra);
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -99,16 +109,83 @@
     <p class="lead">Im Laufe des Projektjahres haben wir drei Orte besucht, die jeweils einen eigenen Zugang zum Thema Klimawandel ermöglichten – von Messdaten über Wissenschaftskommunikation bis hin zu konkreten Handlungsperspektiven.</p>
 
 
-    <!-- ─── Station 1: DWD ────────────────────────────────── -->
-    <div class="station-block" id="dwd">
+    <!-- ─── Station 1: EXPERIMENTA ───────────────────────── -->
+    <div class="station-block" id="experimenta">
       <div class="station-header">
         <span class="station-header__num">Station 01</span>
+        <h2 class="station-header__title">EXPERIMENTA Frankfurt</h2>
+      </div>
+
+      <div class="station-meta">
+        <span>Frankfurt am Main</span>
+        <span>03.09.2026</span>
+        <span>[Dauer einfügen]</span>
+      </div>
+
+      <!-- Fotos: Experimenta -->
+      <figure class="photo">
+        <img src="assets/img/experimenta (3).jpeg" alt="Buntes Schatten-Selfie von Herr Bannert an einer Lichtinstallation in der Experimenta">
+        <figcaption>Hier sieht man unseren Mathematiklehrer Herr Bannert, wie er gerade ein kreatives Selfie beim Experimenta macht.</figcaption>
+      </figure>
+
+      <figure class="photo-pair">
+        <div class="photo-pair__imgs">
+          <img src="assets/img/experimenta.jpeg" alt="Lehrer und zwei Schüler arbeiten gemeinsam an einer Tüftelaufgabe mit Holzklötzen">
+          <img src="assets/img/experimenta (2).jpeg" alt="Klasse steht zusammen und bearbeitet ein Arbeitsblatt in der Experimenta">
+          <img src="assets/img/experimenta (4).jpeg" alt="Plakat zum Pascalschen Dreieck in der Experimenta">
+        </div>
+        <figcaption>Hier ist unsere Klasse zusammen mit dem Lehrer beim Arbeiten und im Hintergrund ein interessantes Plakat zu sehen.</figcaption>
+      </figure>
+
+      <p>Am ersten Projekttag besuchten wir das Experiminta-Museum. Dort konnten wir uns frei bewegen und die verschiedenen interaktiven Stationen eigenständig ausprobieren. Besonders interessant waren die mathematischen und physikalischen Knobelaufgaben, die zum Experimentieren und Mitmachen einluden. Zusätzlich wurden wir in Gruppen eingeteilt und erhielten Arbeitsblätter mit verschiedenen Aufgaben. Diese sollten wir mithilfe der Ausstellungsstücke selbstständig bearbeiten und die Lösungen erschließen. Dabei beschäftigten wir uns unter anderem mit dem Thema Schwingungen sowie weiteren mathematischen und physikalischen Phänomenen.</p>
+
+      <div class="two-col">
+        <div>
+          <h3>Was wir gelernt haben</h3>
+          <p>Hier beschreiben die Schülerinnen und Schüler, was sie in der EXPERIMENTA mitgenommen haben – z.B. interaktive Klimaexperimente, Treibhauseffekt-Demonstrationen oder Energiewendeausstellung.</p>
+        </div>
+        <div>
+          <blockquote>
+            <p>„Hier ein Zitat von jemandem aus dem Kurs."</p>
+            <cite>— Name, Klasse</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Optional: Karten für einzelne Highlights -->
+      <h3>Highlights</h3>
+      <div class="card-grid">
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Exponat / Thema</p>
+          <p class="card__title">Titel des Highlights</p>
+          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-rule">
+
+
+    <!-- ─── Station 2: DWD ────────────────────────────────── -->
+    <div class="station-block" id="dwd">
+      <div class="station-header">
+        <span class="station-header__num">Station 02</span>
         <h2 class="station-header__title">Deutscher Wetterdienst (DWD)</h2>
       </div>
 
       <div class="station-meta">
         <span>Offenbach am Main</span>
-        <span>[Datum einfügen]</span>
+        <span>30.09.2026</span>
         <span>[Dauer einfügen, z.B. Halbtag]</span>
       </div>
 
@@ -150,7 +227,9 @@
       </figure>
 
       <!-- Beschreibung -->
-      <p>Hier kommt eine Beschreibung des Besuchs: Was haben wir gesehen, wer hat uns geführt, was war das Programm?</p>
+      <p>Am zweiten Profiltag besuchten wir zunächst den Deutschen Wetterdienst in Offenbach. Dort beschäftigten wir uns mit den Themen Wetter und Klima und lernten insbesondere den Unterschied zwischen beiden Begriffen kennen. Das Wetter beschreibt den aktuellen Zustand der Atmosphäre an einem bestimmten Ort zu einer bestimmten Zeit, beispielsweise hinsichtlich Temperatur, Niederschlag oder Wind. Das Klima hingegen bezeichnet die durchschnittlichen Wetterverhältnisse über einen langen Zeitraum von mehreren Jahrzehnten.</p>
+
+      <p>Außerdem wurden uns verschiedene Messinstrumente vorgestellt und erklärt, wie man mit ihnen unter anderem die Temperatur, den Luftdruck, den Niederschlag, die Luftfeuchtigkeit und die Windgeschwindigkeit misst. Dabei erfuhren wir, dass moderne Messgeräte und leistungsstarke Computersysteme sehr präzise Wettervorhersagen ermöglichen. Die gewonnenen Daten werden anschließend verarbeitet und unter anderem in Wetter-Apps bereitgestellt, die viele Menschen zur Planung ihres Alltags nutzen. Zusätzlich wurde uns erklärt, dass Wettervorhersagen mithilfe komplexer mathematischer Modelle berechnet werden, bei denen Computer große Mengen an Wetterdaten analysieren und daraus Prognosen für die kommenden Tage erstellen.</p>
 
       <!-- Zwei-Spalten: Was wir gelernt haben + Zitat -->
       <div class="two-col">
@@ -170,24 +249,24 @@
         <strong>Hintergrund:</strong> Der Deutsche Wetterdienst (DWD) ist der nationale meteorologische Dienst Deutschlands und betreibt eines der dichtesten Messnetze Europas. Hier können weiterführende Informationen oder Links zu DWD-Daten stehen.
       </div>
 
-      <!-- ─── Hochseilgarten (gleicher Tag) ──────────────── -->
-      <h3>Hochseilgarten</h3>
-      <p>Am selben Tag waren wir auch noch im Hochseilgarten. Das war die perfekte Gelegenheit, um einfach mal Spaß zu haben und ein bisschen abzuschalten. Gleichzeitig war es total schön, mitten in der Natur zu sein. Das hat uns noch einmal richtig bewusst gemacht, wie wichtig und schützenswert unsere Umwelt ist.</p>
+      <!-- ─── Kletterwald (gleicher Tag) ──────────────── -->
+      <h3>Kletterwald</h3>
+      <p>Im Anschluss besuchten wir den Kletterwald. Dieser Ausflug bot einen gelungenen Ausgleich zum theoretischen Teil des Tages und gab uns die Möglichkeit, gemeinsam Spaß zu haben und uns sportlich zu betätigen. Gleichzeitig verbrachten wir die Zeit mitten in der Natur, wodurch uns noch einmal bewusst wurde, wie wertvoll und schützenswert unsere Umwelt ist. Die Verbindung aus fachlichem Lernen und praktischen Erlebnissen machte den Tag besonders abwechslungsreich und verdeutlichte die Bedeutung des Natur- und Klimaschutzes auf eine anschauliche Weise.</p>
 
-      <div class="photo-grid">
-        <figure class="photo">
+      <div class="gallery-mosaic">
+        <figure>
           <img src="assets/img/hochseilgarten (4).jpeg" alt="Schüler sichert sich am Karabiner im Hochseilgarten">
         </figure>
-        <figure class="photo">
+        <figure>
           <img src="assets/img/hochseilgarten (5).jpeg" alt="Schüler balanciert gesichert auf einem Holzbalken im Hochseilgarten">
         </figure>
-        <figure class="photo">
+        <figure>
           <img src="assets/img/hochseilgarten (3).jpeg" alt="Schüler an der Seilbahn zwischen den Bäumen">
         </figure>
-        <figure class="photo">
+        <figure>
           <img src="assets/img/hochseilgarten (6).jpeg" alt="Gruppe auf einer Plattform hoch oben im Hochseilgarten">
         </figure>
-        <figure class="photo">
+        <figure>
           <img src="assets/img/hochseilgarten.jpeg" alt="Gruppenfoto im Hochseilgarten">
         </figure>
       </div>
@@ -196,64 +275,39 @@
     <hr class="section-rule">
 
 
-    <!-- ─── Station 2: EXPERIMENTA ───────────────────────── -->
-    <div class="station-block" id="experimenta">
+    <!-- ─── Station 3: medico international ───────────────── -->
+    <div class="station-block" id="medico">
       <div class="station-header">
-        <span class="station-header__num">Station 02</span>
-        <h2 class="station-header__title">EXPERIMENTA Frankfurt</h2>
+        <span class="station-header__num">Station 03</span>
+        <h2 class="station-header__title"><a href="https://de.wikipedia.org/wiki/Medico_international" target="_blank" rel="noopener">medico international</a></h2>
       </div>
 
       <div class="station-meta">
-        <span>Frankfurt am Main</span>
-        <span>[Datum einfügen]</span>
-        <span>[Dauer einfügen]</span>
+        <span>medico international, Frankfurt-Ostend &amp; Schule</span>
+        <span>23.03.2026</span>
+        <span>Zweitägiger Workshop</span>
       </div>
 
-      <div class="img-placeholder">Foto von der EXPERIMENTA einfügen</div>
+      <img class="org-logo" src="assets/img/medico-international-logo.svg" alt="Logo von medico international">
 
-      <p>Hier kommt eine Beschreibung des Besuchs: Welche Ausstellungsbereiche haben wir erkundet, welche Experimente oder Exponate standen im Mittelpunkt?</p>
+      <div class="img-placeholder">Foto vom Workshop bei medico international einfügen</div>
 
-      <div class="two-col">
-        <div>
-          <h3>Was wir gelernt haben</h3>
-          <p>Hier beschreiben die Schülerinnen und Schüler, was sie in der EXPERIMENTA mitgenommen haben – z.B. interaktive Klimaexperimente, Treibhauseffekt-Demonstrationen oder Energiewendeausstellung.</p>
-        </div>
-        <div>
-          <blockquote>
-            <p>„Hier ein Zitat von jemandem aus dem Kurs."</p>
-            <cite>— Name, Klasse</cite>
-          </blockquote>
-        </div>
-      </div>
+      <p>Am dritten und vierten Profiltag nahmen wir an einem zweitägigen Workshop mit medico international teil. Ein Teil des Workshops fand in den Räumlichkeiten von medico international im Ostend statt, der andere an unserer Schule im 5. Stock. Gemeinsam beschäftigten wir uns mit den globalen Folgen des Klimawandels und deren Auswirkungen auf das Leben der Menschen weltweit.</p>
 
-      <!-- Optional: Karten für einzelne Highlights -->
-      <h3>Highlights</h3>
-      <div class="card-grid">
-        <div class="card">
-          <p class="card__label">Exponat / Thema</p>
-          <p class="card__title">Titel des Highlights</p>
-          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
-        </div>
-        <div class="card">
-          <p class="card__label">Exponat / Thema</p>
-          <p class="card__title">Titel des Highlights</p>
-          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
-        </div>
-        <div class="card">
-          <p class="card__label">Exponat / Thema</p>
-          <p class="card__title">Titel des Highlights</p>
-          <p>Kurze Beschreibung, was an diesem Exponat oder Bereich besonders war.</p>
-        </div>
-      </div>
+      <p>Dabei lernten wir, dass der Klimawandel nicht nur ökologische Probleme verursacht, sondern auch politische, wirtschaftliche und insbesondere soziale Folgen hat. Außerdem wurde deutlich, dass viele ärmere Länder besonders stark von Naturkatastrophen wie Überschwemmungen, Dürren oder anderen extremen Wetterereignissen betroffen sind, obwohl sie oft nur einen geringen Anteil an den weltweiten Emissionen verursachen.</p>
+
+      <p>Während des Workshops nahmen wir an einem Quiz mit verschiedenen Fragen zum globalen Klimawandel teil und spielten interaktive Spiele. Bei einer Aufgabe sollten wir beispielsweise anhand der Anzahl der auf verschiedene Kontinente verteilten Stühle einschätzen, wie hoch der Kunststoffkonsum in den jeweiligen Regionen ist. Dadurch wurden globale Ungleichheiten anschaulich dargestellt.</p>
+
+      <p>Am Ende der beiden Profiltage wurde uns bewusst, dass der Klimawandel nur durch internationale Zusammenarbeit und gesellschaftlichen Zusammenhalt wirksam bekämpft werden kann. Die Bewältigung dieser globalen Herausforderung erfordert gemeinsames Handeln und Verantwortung über Ländergrenzen hinweg.</p>
     </div>
 
     <hr class="section-rule">
 
 
-    <!-- ─── Station 3: basa eV ───────────────────────────── -->
+    <!-- ─── Station 4: basa eV ───────────────────────────── -->
     <div class="station-block" id="basa">
       <div class="station-header">
-        <span class="station-header__num">Station 03</span>
+        <span class="station-header__num">Station 04</span>
         <h2 class="station-header__title">basa eV · Neu-Anspach</h2>
       </div>
 
@@ -288,6 +342,29 @@
       <div class="infobox">
         <strong>Über basa eV:</strong> Hier kann ein kurzer Satz zu basa eV stehen – was der Verein macht, was sein Bildungsauftrag ist und wie er mit dem Thema Klimagerechtigkeit zusammenhängt.
       </div>
+    </div>
+
+    <hr class="section-rule">
+
+
+    <!-- ─── Station 5: SoLaWi (geplant) ───────────────────── -->
+    <div class="station-block" id="solawi">
+      <div class="station-header">
+        <span class="station-header__num">Station 05</span>
+        <h2 class="station-header__title">SoLaWi · Neu-Anspach</h2>
+      </div>
+
+      <div class="station-meta">
+        <span>Neu-Anspach (Taunus)</span>
+        <span>[Datum einfügen] · geplant</span>
+        <span>Dreitägiger Workshop</span>
+      </div>
+
+      <div class="img-placeholder">Foto vom SoLaWi-Workshop einfügen</div>
+
+      <p>In Zukunft werden wir außerdem an einem dreitägigen Workshop bei der SoLaWi in Neu-Anspach teilnehmen. Dort werden wir uns ebenfalls mit den Ursachen und Folgen des Klimawandels beschäftigen. Ziel des Workshops ist es, die Zusammenhänge des menschengemachten Klimawandels besser zu verstehen, eigene Handlungsmöglichkeiten kennenzulernen und Erfahrungen zu sammeln, die die eigene Handlungsfähigkeit stärken.</p>
+
+      <p>Ein weiterer Schwerpunkt wird die Förderung des kritischen Denkens im Umgang mit sozialen Medien sein. Dabei sollen wir lernen, Informationen nicht ungeprüft zu übernehmen, sondern sie kritisch zu hinterfragen und auf ihre Glaubwürdigkeit zu überprüfen. Trotz des ernsten und sensiblen Themas soll der Spaß nicht zu kurz kommen, da gemeinsames und aktives Lernen besonders nachhaltig ist. Geplant sind unter anderem ein Quiz zum Austausch von Erfahrungen sowie verschiedene interaktive Methoden, bei denen wir unsere Gedanken und Gefühle zum Thema Klimagerechtigkeit ausdrücken können. Dadurch soll unser Interesse an dem Thema geweckt und vertieft werden.</p>
     </div>
 
   </main>

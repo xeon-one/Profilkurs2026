@@ -22,6 +22,46 @@
       margin-bottom: 0.75rem;
     }
     .img-placeholder { height: 130px; margin: 0.75rem 0; font-size: 12px; }
+    .popup-subtitle {
+      font-size: 12.5px;
+      color: var(--col-muted);
+      margin: -0.5rem 0 1rem;
+      font-style: italic;
+    }
+    h3.popup-h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--col-accent);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin: 0.5rem 0 0.75rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid var(--col-border);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .data-table th {
+      background: var(--col-accent-lt);
+      color: var(--col-nav);
+      font-weight: 600;
+    }
+    ul.popup-list { margin: 0 0 1rem 1.1rem; }
+    ul.popup-list li { margin-bottom: 0.5rem; }
+    .figure-note {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--col-muted);
+      border-left: 2px solid var(--col-border);
+      padding-left: 0.6rem;
+      margin: 0.4rem 0;
+    }
   </style>
 </head>
 <body>
@@ -29,15 +69,95 @@
   <!-- ═══ Inhalt frei befüllbar: Text, Bilder, Zitate, Daten … ═══ -->
 
   <h2 class="popup-title">🇧🇩 Bangladesch</h2>
+  <p class="popup-subtitle">Eines der klimavulnerabelsten Länder der Welt mit minimalen CO₂-Emissionen</p>
 
   <div class="img-placeholder">Bild zu Bangladesch einfügen</div>
 
-  <p>Hier könnt ihr Text zu Klimadaten und Auswirkungen des Klimawandels in Bangladesch einfügen – z.B. Meeresspiegelanstieg, Überschwemmungen, Klimagerechtigkeit.</p>
-
-  <!-- Beispiel: Infobox für einzelne Kennzahlen -->
+  <h3 class="popup-h3">🌡 Temperaturveränderung (gegenüber 1961–1990)</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Jahr</th><th>Temperaturanomalie</th><th>Bedeutung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2021</td><td>+1,2 °C</td><td>Deutlich wärmer als der Referenzzeitraum</td></tr>
+      <tr><td>2022</td><td>+1,6 °C</td><td>Stark über dem langjährigen Mittel</td></tr>
+      <tr><td>2023</td><td>+1,8 °C</td><td>Eines der wärmsten Jahre</td></tr>
+      <tr><td>2024</td><td>+1,7 °C</td><td>Weiterhin sehr hohe Temperaturen</td></tr>
+      <tr><td>2025</td><td>+1,5 °C</td><td>Leicht unter 2023/24, aber klar erhöht</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Alle Jahre deutlich über dem Referenzwert</li>
+    <li>Erwärmung von etwa +1,2 bis +1,8 °C</li>
+    <li>Besonders ab 2022 starke Belastung durch Hitze</li>
+    <li>Verstärkt Hitzestress &amp; Wasserknappheit in der gesamten Region</li>
+  </ul>
   <div class="infobox">
-    <strong>Kennzahl:</strong> Hier könnt ihr z.B. die Anzahl Betroffener oder einen Meeresspiegel-Wert einfügen.
+    📌 <strong>Wichtigste Erkenntnis:</strong> Bangladeshs Erwärmung entspricht dem globalen Trend, trifft aber eine extrem vulnerable Bevölkerung mit sehr geringer Anpassungskapazität.
   </div>
+
+  <h3 class="popup-h3">🏭 CO₂-Emissionen in Bangladesh</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Kennzahl</th><th>Wert</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Gesamte CO₂-Emissionen</td><td>ca. 120–130 Mio. Tonnen CO₂/Jahr</td></tr>
+      <tr><td>CO₂ pro Kopf</td><td>ca. 0,7 Tonnen pro Person/Jahr</td></tr>
+      <tr><td>Einwohnerzahl</td><td>ca. 170 Mio. Menschen</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Gesamtemissionen steigen durch Industrialisierung</li>
+    <li>Trotzdem sehr niedrige Pro-Kopf-Werte</li>
+    <li>Bangladesh trägt weniger als 1 % zu globalen Emissionen bei</li>
+    <li>Haupttreiber: Textilindustrie, Energiebedarf, Bevölkerungswachstum</li>
+  </ul>
+  <p>➡ ca. 125 Mio. Tonnen CO₂/Jahr insgesamt · ca. 0,7 Tonnen pro Person</p>
+
+  <h3 class="popup-h3">🌪 Extremwetter – Häufigkeit &amp; Intensität</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Extremwetterart</th><th>Vor 50 Jahren</th><th>Heute</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Zyklone</td><td>seltener</td><td>häufiger &amp; stärker</td></tr>
+      <tr><td>Starkregen</td><td>saisonal begrenzt</td><td>intensiver &amp; unberechenbarer</td></tr>
+      <tr><td>Überschwemmungen</td><td>regelmäßig im Monsun</td><td>deutlich zerstörerischer</td></tr>
+      <tr><td>Sturmfluten</td><td>gelegentlich</td><td>höheres Risiko durch Meeresspiegelanstieg</td></tr>
+      <tr><td>Hitzewellen</td><td>weniger extrem</td><td>häufiger &amp; gefährlicher</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Deutlich steigende Zahl klimatischer Extremereignisse</li>
+    <li>Besonders gefährdet: Küsten- und Flussregionen (Ganges-Brahmaputra-Delta)</li>
+    <li>Kombination aus Meeresspiegelanstieg + Starkregen verstärkt Überschwemmungen</li>
+    <li>Schäden steigen trotz geringer CO₂-Emissionen stark an</li>
+  </ul>
+
+  <div class="infobox">
+    💡 <strong>Kurzfazit Bangladesh:</strong><br>
+    🌡️ Deutlich steigende Temperaturen (+1,2 bis +1,8 °C)<br>
+    🌊 Extreme Vulnerabilität durch Lage im Gangesdelta<br>
+    🏭 Sehr geringe CO₂-Emissionen (&lt;1 % global)<br>
+    ⚖️ Stark betroffen, aber minimaler Verursacher des Klimawandels
+  </div>
+
+  <h3 class="popup-h3">Klimagerechtigkeit International</h3>
+
+  <ul class="popup-list">
+    <li>Meist von Klimawandel bedrohten Ländern aber nur für ein kleinen Teil Anteil der CO2 Emissionen zuständig.</li>
+    <li>Sitzt sich auf internationalen Konferenzen damit, dass Industrieländer mehr Verantwortung übernehmen.</li>
+    <li>Starke Klimaanpassung und finanzielle Forderungen von Ländern</li>
+    <li>Die am stärksten betroffenen Gruppen sind Küstenbewohner, Bauern und Fischer und Armeefamilien. Wegen steigenden Meeresspiegels geht Salzwasser in Trinkquellen und Felder. Fischer leiden unter Veränderungen des Ökosystems. Arme-Familien können sich nicht vor Naturkatastrophen schützen.</li>
+    <li>Daraufhin wird der Ausbau von Deichen, Frühwarnsysteme und Schutzmaßnahmen für Überschwemmungen gefördert wegen des steigenden Meeresspiegels.</li>
+    <li>Bangladesch ratifizierte das Pariser Klimaabkommen und ist stark in den internationalen Klimaverhandlungen engagiert.</li>
+    <li>Die Ziele wie Frühwarnsysteme etc. und Senkung von CO₂-Emissionen um 20 % sind abhängig von den privilegierten Ländern.</li>
+    <li>Bangladesch wird 17 % seiner Landfläche bis 2050 verlieren, wenn nichts gemacht wird. Dabei werden bis zu 13 Millionen Menschen ihren Wohnort verlieren innerhalb des eigenen Landes.</li>
+  </ul>
+
+  <p class="figure-note">Abbildung im Originaldokument: Co2-Emissionen Pro-Kopf Von Bangladesch in Bezug von Weltweiten Co2-emissionen Pro-Kopf.</p>
+  <p class="figure-note">Abbildung im Originaldokument: Die Küste von Bangladesch wir immer kleiner wegen denn steigenden Meeresspiegel.</p>
 
 </body>
 </html>

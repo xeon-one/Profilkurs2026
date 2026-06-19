@@ -21,7 +21,39 @@
       color: var(--col-nav);
       margin-bottom: 0.75rem;
     }
+    .popup-subtitle {
+      font-size: 12.5px;
+      color: var(--col-muted);
+      margin: -0.5rem 0 1rem;
+      font-style: italic;
+    }
     .img-placeholder { height: 130px; margin: 0.75rem 0; font-size: 12px; }
+    h3.popup-h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--col-accent);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin: 0.5rem 0 0.75rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid var(--col-border);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .data-table th {
+      background: var(--col-accent-lt);
+      color: var(--col-nav);
+      font-weight: 600;
+    }
+    ul.popup-list { margin: 0 0 0.75rem 1.1rem; }
+    ul.popup-list li { margin-bottom: 0.25rem; }
   </style>
 </head>
 <body>
@@ -29,14 +61,77 @@
   <!-- ═══ Inhalt frei befüllbar: Text, Bilder, Zitate, Daten … ═══ -->
 
   <h2 class="popup-title">🇲🇽 Mexiko</h2>
+  <p class="popup-subtitle">Aufstrebende Volkswirtschaft mit mittleren Emissionen und steigender Klimabelastung</p>
 
   <div class="img-placeholder">Bild zu Mexiko einfügen</div>
 
-  <p>Hier könnt ihr Text zu Klimadaten und Auswirkungen des Klimawandels in Mexiko einfügen – z.B. Hitzewellen, Wasserkrise in Mexiko-Stadt, Hurrikane.</p>
-
-  <!-- Beispiel: Infobox für einzelne Kennzahlen -->
+  <h3 class="popup-h3">🌡 Temperaturveränderung (gegenüber 1961–1990)</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Jahr</th><th>Temperaturanomalie</th><th>Bedeutung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2021</td><td>+1,1 °C</td><td>Deutlich wärmer als der Referenzzeitraum</td></tr>
+      <tr><td>2022</td><td>+1,6 °C</td><td>Stark über dem langjährigen Mittel</td></tr>
+      <tr><td>2023</td><td>+1,8 °C</td><td>Eines der wärmsten Jahre</td></tr>
+      <tr><td>2024</td><td>+1,7 °C</td><td>Weiterhin sehr hohe Temperaturen</td></tr>
+      <tr><td>2025</td><td>+1,4 °C</td><td>Leicht niedriger, aber klar erhöht</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Durchgehend positive Anomalien → jedes Jahr wärmer als Referenz</li>
+    <li>Stärkste Erwärmung in den Jahren 2022–2024</li>
+    <li>Besonders spürbar in Städten durch Hitzeinseln</li>
+    <li>Zunehmende Belastung für Wasserressourcen und Landwirtschaft</li>
+  </ul>
   <div class="infobox">
-    <strong>Kennzahl:</strong> Hier könnt ihr z.B. eine Temperaturentwicklung oder Hurrikan-Statistik einfügen.
+    📌 <strong>Wichtigste Erkenntnis:</strong> Mexiko erlebt ähnliche Temperaturanstiege wie Bangladesh, verfügt jedoch über deutlich größere wirtschaftliche Kapazitäten zur Anpassung.
+  </div>
+
+  <h3 class="popup-h3">🏭 CO₂-Emissionen in Mexiko</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Kennzahl</th><th>Wert</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Gesamte CO₂-Emissionen</td><td>ca. 420–450 Mio. Tonnen CO₂/Jahr</td></tr>
+      <tr><td>CO₂ pro Kopf</td><td>ca. 3,2–3,5 Tonnen pro Person/Jahr</td></tr>
+      <tr><td>Einwohnerzahl</td><td>ca. 130 Mio. Menschen</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Emissionen deutlich höher als in Bangladesh, aber niedriger als in Industrieländern</li>
+    <li>Hauptquellen: Verkehr, Öl- &amp; Gasindustrie, Stromerzeugung</li>
+    <li>Pro Kopf im mittleren globalen Bereich</li>
+  </ul>
+  <p>➡ ca. 430 Mio. Tonnen CO₂/Jahr insgesamt · ca. 3,3 Tonnen pro Person</p>
+
+  <h3 class="popup-h3">🌪 Extremwetter – Häufigkeit &amp; Intensität</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Extremwetterart</th><th>Vor 50 Jahren</th><th>Heute</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Hurrikane (Pazifik/Atlantik)</td><td>seltener</td><td>häufiger &amp; intensiver</td></tr>
+      <tr><td>Starkregen</td><td>regional begrenzt</td><td>häufiger &amp; stärker</td></tr>
+      <tr><td>Dürren</td><td>gelegentlich</td><td>häufiger &amp; länger</td></tr>
+      <tr><td>Hitzewellen</td><td>weniger extrem</td><td>deutlich intensiver</td></tr>
+      <tr><td>Überschwemmungen</td><td>saisonal</td><td>häufiger durch Starkregen</td></tr>
+    </tbody>
+  </table>
+  <ul class="popup-list">
+    <li>Zunahme von Hitzewellen und Dürren besonders im Norden</li>
+    <li>Küstenregionen stärker durch Hurrikane betroffen</li>
+    <li>Wasserknappheit wird zunehmend kritisch</li>
+    <li>Landwirtschaft stark abhängig von Niederschlagsmustern</li>
+  </ul>
+
+  <div class="infobox">
+    💡 <strong>Kurzfazit Mexiko:</strong><br>
+    🌡️ Deutlich steigende Temperaturen (+1 bis +1,8 °C)<br>
+    🌪 Mehr und stärkere Extremwetterereignisse<br>
+    🏭 Mittlere CO₂-Emissionen weltweit<br>
+    ⚖️ Stark betroffen, aber auch relevanter Emittent im Vergleich zu ärmeren Ländern
   </div>
 
 </body>

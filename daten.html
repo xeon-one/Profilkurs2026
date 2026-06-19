@@ -96,8 +96,31 @@
       margin: 0.75rem 0 2.5rem;
     }
 
+    /* Ländervergleich-Tabelle */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 1rem 0 1.5rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid var(--col-border);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .data-table th {
+      background: var(--col-accent-lt);
+      color: var(--col-nav);
+      font-weight: 600;
+    }
+
+    .popup-list { margin: 0 0 1rem 1.1rem; }
+    .popup-list li { margin-bottom: 0.4rem; }
+
     @media (max-width: 620px) {
       #map-popup-frame { height: 320px; }
+      .data-table { font-size: 12.5px; }
     }
   </style>
 </head>
@@ -142,6 +165,45 @@
       </div>
     </div>
     <p class="data-map-hint">Klickt auf eines der markierten Länder, um die Infos zu öffnen.</p>
+
+    <hr class="section-rule">
+
+    <h2>⚖️ Ländervergleich: Bangladesh | Mexiko | Deutschland</h2>
+    <p class="lead">Direkte Gegenüberstellung der wichtigsten Klimaindikatoren</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Indikator</th>
+          <th>🇧🇩 Bangladesh</th>
+          <th>🇲🇽 Mexiko</th>
+          <th>🇩🇪 Deutschland</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Einwohner</td><td>ca. 170 Mio.</td><td>ca. 130 Mio.</td><td>ca. 84 Mio.</td></tr>
+        <tr><td>Temp.-Anomalie (2023)</td><td>+1,8 °C</td><td>+1,8 °C</td><td>+2,5 °C</td></tr>
+        <tr><td>Gesamt-CO₂/Jahr</td><td>~125 Mio. t</td><td>~435 Mio. t</td><td>~580 Mio. t</td></tr>
+        <tr><td>CO₂ pro Kopf</td><td>~0,7 t / Person</td><td>~3,3 t / Person</td><td>~7 t / Person</td></tr>
+        <tr><td>Hauptgefahr</td><td>Zyklone, Überschwemmungen</td><td>Hurrikane, Dürren</td><td>Hitzewellen, Hochwasser</td></tr>
+        <tr><td>Klimavulnerabilität</td><td>Sehr hoch</td><td>Hoch</td><td>Mittel</td></tr>
+        <tr><td>Anteil glob. Emissionen</td><td>&lt;1 %</td><td>ca. 1,1 %</td><td>ca. 1,5 %</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Fazit: Klimagerechtigkeit im globalen Kontext</h3>
+    <ul class="popup-list">
+      <li>Alle drei Länder erleben klare Erwärmungstrends – Deutschland am stärksten (+2,5 °C in 2023)</li>
+      <li>Bangladesh ist beim CO₂-Pro-Kopf-Ausstoß zehnmal niedriger als Deutschland</li>
+      <li>Trotz minimaler Emissionen trägt Bangladesh die schwersten Klimafolgen</li>
+      <li>Deutschland hat als Industrienation historisch am meisten zum Klimawandel beigetragen</li>
+      <li>Mexiko nimmt eine mittlere Rolle ein – wachsende Emissionen, wachsende Klimafolgen</li>
+      <li>Alle drei Länder benötigen entschlossenes Handeln – mit unterschiedlichen Schwerpunkten</li>
+    </ul>
+
+    <div class="infobox">
+      💡 <strong>Kernaussage:</strong> Die Länder, die am stärksten vom Klimawandel betroffen sind, haben oft am wenigsten zu seiner Entstehung beigetragen – eine zentrale Frage der globalen Klimagerechtigkeit.
+    </div>
 
   </main>
 
