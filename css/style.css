@@ -270,20 +270,34 @@ figure.photo-pair figcaption {
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
   margin: 1.5rem 0;
 }
 
+/* Portrait (höher als breit) → 2 von 6 Spalten → 3 pro Zeile */
 .photo-grid figure.photo {
   margin: 0;
+  grid-column: span 2;
+}
+
+/* Querformat (bis ~2:1) → 3 von 6 Spalten → 2 pro Zeile */
+.photo-grid figure.photo--landscape {
+  grid-column: span 3;
+}
+
+/* Sehr breites Bild (≥ 1.8:1) → volle Breite */
+.photo-grid figure.photo--wide {
+  grid-column: span 6;
 }
 
 .photo-grid img {
-  max-width: 100%;
-  max-height: 70vh;
-  width: auto;
+  display: block;
+  width: 100%;
   height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: var(--radius);
 }
 
 figure.photo-pair {
@@ -318,7 +332,9 @@ figure.photo-pair {
 .photo-pair__legend strong { color: var(--col-nav); }
 
 @media (max-width: 620px) {
-  .photo-grid img { height: auto; }
+  .photo-grid figure.photo,
+  .photo-grid figure.photo--landscape,
+  .photo-grid figure.photo--wide { grid-column: span 6; }
   .photo-pair__imgs { grid-template-columns: 1fr; }
   .photo-pair__legend { columns: 1; }
 }
