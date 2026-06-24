@@ -91,7 +91,7 @@
         <li><a href="index.html">Projekt</a></li>
         <li><a href="stationen.html">Stationen</a></li>
         <li><a href="daten.html">Daten</a></li>
-        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="produkte.html">Produkte</a></li>
         <li><a href="fazit.html">Fazit</a></li>
         <li><a href="slideshow.html">Slideshow</a></li>
       </ul>
@@ -134,28 +134,17 @@
       </figure>
 
       <figure class="photo-pair">
-        <div class="photo-pair__imgs">
+        <div class="photo-pair__imgs" style="grid-template-columns: 1fr 1fr;">
           <img src="assets/img/experimenta.jpeg" alt="Lehrer und zwei Schüler arbeiten gemeinsam an einer Tüftelaufgabe mit Holzklötzen">
-          <img src="assets/img/experimenta (2).jpeg" alt="Klasse steht zusammen und bearbeitet ein Arbeitsblatt in der Experimenta">
-          <img src="assets/img/experimenta (4).jpeg" alt="Plakat zum Pascalschen Dreieck in der Experimenta">
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <img src="assets/img/experimenta (2).jpeg" alt="Klasse steht zusammen und bearbeitet ein Arbeitsblatt in der Experimenta">
+            <img src="assets/img/experimenta (4).jpeg" alt="Plakat zum Pascalschen Dreieck in der Experimenta">
+          </div>
         </div>
         <figcaption>Unsere Klasse beim Experimentieren mit mathematischen Rätseln – und ein Blick auf das Plakat zum Pascalschen Dreieck.</figcaption>
       </figure>
 
       <p>Am ersten Projekttag besuchten wir das Experiminta-Museum. Dort konnten wir uns frei bewegen und die verschiedenen interaktiven Stationen eigenständig ausprobieren. Besonders interessant waren die mathematischen und physikalischen Knobelaufgaben, die zum Experimentieren und Mitmachen einluden. Zusätzlich wurden wir in Gruppen eingeteilt und erhielten Arbeitsblätter mit verschiedenen Aufgaben. Diese sollten wir mithilfe der Ausstellungsstücke selbstständig bearbeiten und die Lösungen erschließen. Dabei beschäftigten wir uns unter anderem mit dem Thema Schwingungen sowie weiteren mathematischen und physikalischen Phänomenen.</p>
-
-      <div class="two-col">
-        <div>
-          <h3>Was wir gelernt haben</h3>
-          <p>Hier beschreiben die Schülerinnen und Schüler, was sie in der EXPERIMENTA mitgenommen haben – z.B. interaktive Klimaexperimente, Treibhauseffekt-Demonstrationen oder Energiewendeausstellung.</p>
-        </div>
-        <div>
-          <blockquote>
-            <p>„Hier ein Zitat von jemandem aus dem Kurs."</p>
-            <cite>— Name, Klasse</cite>
-          </blockquote>
-        </div>
-      </div>
 
       <h3>Highlights</h3>
       <div class="card-grid">
@@ -256,22 +245,15 @@
       <h3>Kletterwald</h3>
       <p>Im Anschluss besuchten wir den Kletterwald. Dieser Ausflug bot einen gelungenen Ausgleich zum theoretischen Teil des Tages und gab uns die Möglichkeit, gemeinsam Spaß zu haben und uns sportlich zu betätigen. Gleichzeitig verbrachten wir die Zeit mitten in der Natur, wodurch uns noch einmal bewusst wurde, wie wertvoll und schützenswert unsere Umwelt ist. Die Verbindung aus fachlichem Lernen und praktischen Erlebnissen machte den Tag besonders abwechslungsreich und verdeutlichte die Bedeutung des Natur- und Klimaschutzes auf eine anschauliche Weise.</p>
 
-      <div class="photo-grid">
-        <figure class="photo">
-          <img src="assets/img/hochseilgarten (4).jpeg" alt="Schüler sichert sich am Karabiner im Hochseilgarten">
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/hochseilgarten (5).jpeg" alt="Schüler balanciert gesichert auf einem Holzbalken im Hochseilgarten">
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/hochseilgarten (3).jpeg" alt="Schüler an der Seilbahn zwischen den Bäumen">
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/hochseilgarten (6).jpeg" alt="Gruppe auf einer Plattform hoch oben im Hochseilgarten">
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/hochseilgarten.jpeg" alt="Gruppenfoto im Hochseilgarten">
-        </figure>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <img src="assets/img/hochseilgarten (4).jpeg" alt="Schüler sichert sich am Karabiner im Hochseilgarten" style="width: 100%; border-radius: var(--radius);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <img src="assets/img/hochseilgarten (3).jpeg" alt="Schüler an der Seilbahn zwischen den Bäumen" style="width: 100%; border-radius: var(--radius);">
+            <img src="assets/img/hochseilgarten (6).jpeg" alt="Gruppe auf einer Plattform hoch oben im Hochseilgarten" style="width: 100%; border-radius: var(--radius);">
+          </div>
+        </div>
+        <img src="assets/img/hochseilgarten (5).jpeg" alt="Schüler balanciert gesichert auf einem Holzbalken im Hochseilgarten" style="width: 60%; height: 100%; object-fit: cover; border-radius: var(--radius);">
       </div>
     </div>
 
@@ -292,8 +274,6 @@
       </div>
 
       <img class="org-logo" src="assets/img/medico-international-logo.svg" alt="Logo von medico international">
-
-      <div class="img-placeholder">Foto vom Workshop bei medico international einfügen</div>
 
       <p>Am dritten und vierten Profiltag nahmen wir an einem zweitägigen Workshop mit medico international teil. Ein Teil des Workshops fand in den Räumlichkeiten von medico international im Ostend statt, der andere an unserer Schule im 5. Stock. Gemeinsam beschäftigten wir uns mit den globalen Folgen des Klimawandels und deren Auswirkungen auf das Leben der Menschen weltweit.</p>
 
@@ -326,16 +306,14 @@
         <img src="assets/img/na_gruppe.jpeg" alt="Gruppenfoto beim basa-Aufenthalt in Neu-Anspach">
       </figure>
 
-      <p>Hier kommt eine Beschreibung des mehrtägigen Aufenthalts bei basa eV: Wo haben wir gewohnt, was war das Programm, welche Themen haben wir bearbeitet?</p>
-
       <div class="two-col">
         <div>
-          <h3>Workshops &amp; Programm</h3>
-          <p>Hier beschreiben die Schülerinnen und Schüler, welche Workshops stattfanden – z.B. Klimagerechtigkeit im globalen Kontext, Handlungsperspektiven, Gruppenarbeiten.</p>
+          <h3>Tag 1</h3>
+          <p>Am Montag haben wir um 11:00 Uhr mit dem Workshop begonnen. Zuerst haben wir uns etwa 1,5 Stunden mit dem Thema Kolonisierung beschäftigt. Dabei haben wir gelernt, was Kolonisierung bedeutet und welche Auswirkungen sie auf verschiedene Länder und Menschen hatte. Anschließend gab es Mittagessen – das Essen war sehr lecker. Während der Mittagspause durften wir in unsere Zimmer gehen und es uns dort gemütlich machen. Nach der Pause haben wir weiter zum Thema Kolonisierung gearbeitet und besprochen, wie die Folgen der Kolonisierung mit der heutigen Klimakrise zusammenhängen. Am Abend haben wir gemeinsam Fußball geschaut und den Tag entspannt ausklingen lassen.</p>
         </div>
         <div>
-          <h3>Sozialer Landwirtschaftsbetrieb</h3>
-          <p>Hier kann der Besuch des landwirtschaftlichen Betriebs beschrieben werden – was dort produziert wird, wie Nachhaltigkeit dort gelebt wird und was die Schüler mitgenommen haben.</p>
+          <h3>Tag 3</h3>
+          <p>Der zweite Tag begann um 8:00 Uhr mit dem Frühstück. Um 9:00 Uhr trafen wir uns, um organisatorische Dinge zu besprechen, bevor wir in Gruppen eingeteilt wurden. Einige Gruppen drehten Videos, während andere ein Plakat erstellten – so konnten wir die Inhalte des Workshops kreativ bearbeiten. Später präsentierten alle Gruppen ihre Ergebnisse vor der ganzen Klasse. Zum Mittagessen gab es Ofenkartoffeln mit Gemüse und einer Joghurt-Kräuter-Soße. Danach packte jeder seine Sachen, räumte sein Zimmer auf und wir traten gemeinsam die Heimreise an.</p>
         </div>
       </div>
 
@@ -344,8 +322,8 @@
       </figure>
 
       <blockquote>
-        <p>„Hier ein längeres Zitat, das den Aufenthalt bei basa eV zusammenfasst – aus der Perspektive eines Schülers oder einer Schülerin."</p>
-        <cite>— Name, Klasse</cite>
+        <p>„Wir fanden den Ausflug insgesamt richtig gut. Die Workshops über Kolonisierung waren zwar manchmal anstrengend, aber wir haben echt viel Neues gelernt und uns danach zusammen gefragt, wie das alles mit der Klimakrise zusammenhängt – das hat uns ziemlich überrascht. Cool war auch, dass wir nicht die ganze Zeit nur geredet haben, sondern selbst Videos drehen und Plakate gestalten durften. Das hat auf jeden Fall mehr Spaß gemacht als normaler Unterricht. Alles in allem war es eine tolle Klassenfahrt, die wir so schnell nicht vergessen werden."</p>
+        <cite>Mohammed Achraf — 12A</cite>
       </blockquote>
 
       <div class="infobox">
@@ -371,10 +349,10 @@
       <figure class="photo">
         <img src="assets/img/na_solawi.jpeg" alt="Besuch bei der Solidarischen Landwirtschaft in Neu-Anspach">
       </figure>
+<h3>Tag 2</h3>
+      <p>Außerdem unternahmen wir eine Exkursion zur SoLaWi in Neu-Anspach. Dort beschäftigten wir uns ebenfalls mit den Ursachen und Folgen des Klimawandels. Ziel des Besuchs war es, die Zusammenhänge des menschengemachten Klimawandels besser zu verstehen, eigene Handlungsmöglichkeiten kennenzulernen und Erfahrungen zu sammeln, die die eigene Handlungsfähigkeit stärken.</p>
 
-      <p>In Zukunft werden wir außerdem an einem dreitägigen Workshop bei der SoLaWi in Neu-Anspach teilnehmen. Dort werden wir uns ebenfalls mit den Ursachen und Folgen des Klimawandels beschäftigen. Ziel des Workshops ist es, die Zusammenhänge des menschengemachten Klimawandels besser zu verstehen, eigene Handlungsmöglichkeiten kennenzulernen und Erfahrungen zu sammeln, die die eigene Handlungsfähigkeit stärken.</p>
-
-      <p>Ein weiterer Schwerpunkt wird die Förderung des kritischen Denkens im Umgang mit sozialen Medien sein. Dabei sollen wir lernen, Informationen nicht ungeprüft zu übernehmen, sondern sie kritisch zu hinterfragen und auf ihre Glaubwürdigkeit zu überprüfen. Trotz des ernsten und sensiblen Themas soll der Spaß nicht zu kurz kommen, da gemeinsames und aktives Lernen besonders nachhaltig ist. Geplant sind unter anderem ein Quiz zum Austausch von Erfahrungen sowie verschiedene interaktive Methoden, bei denen wir unsere Gedanken und Gefühle zum Thema Klimagerechtigkeit ausdrücken können. Dadurch soll unser Interesse an dem Thema geweckt und vertieft werden.</p>
+      <p>Ein weiterer Schwerpunkt war die Förderung des kritischen Denkens im Umgang mit sozialen Medien. Dabei lernten wir, Informationen nicht ungeprüft zu übernehmen, sondern sie kritisch zu hinterfragen und auf ihre Glaubwürdigkeit zu überprüfen. Trotz des ernsten und sensiblen Themas kam der Spaß nicht zu kurz, da gemeinsames und aktives Lernen besonders nachhaltig ist. Unter anderem gab es ein Quiz zum Austausch von Erfahrungen sowie verschiedene interaktive Methoden, bei denen wir unsere Gedanken und Gefühle zum Thema Klimagerechtigkeit ausdrücken konnten. Dadurch wurde unser Interesse an dem Thema geweckt und vertieft.</p>
     </div>
   </main>
 

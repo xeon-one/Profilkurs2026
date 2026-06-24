@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produkte – Klimawandel & Klimagerechtigkeit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .fullwidth-img {
+      display: block;
+      width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      margin-left: calc(-50vw + 50%);
+      cursor: zoom-in;
+    }
+    .fullwidth-img + .fullwidth-img {
+      margin-top: 0.5rem;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      cursor: zoom-out;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.is-open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 95vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .lightbox__close {
+      position: fixed;
+      top: 1rem;
+      right: 1.25rem;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <button class="site-nav__toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Projekt</a></li>
+        <li><a href="stationen.html">Stationen</a></li>
+        <li><a href="daten.html">Daten</a></li>
+        <li><a href="produkte.html">Produkte</a></li>
+        <li><a href="fazit.html">Fazit</a></li>
+        <li><a href="slideshow.html">Slideshow</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-header__eyebrow">Kapitel 4 von 5</p>
+    <h1 class="page-header__title">Produkte unseres Workshops in Neu-Anspach</h1>
+  </header>
+
+  <main class="page-content">
+
+    <img class="fullwidth-img" src="assets/img/PXL_20260624_174618575.MP.jpg" alt="Bild 1" onclick="openLightbox(this.src, this.alt)">
+    <img class="fullwidth-img" src="assets/img/PXL_20260624_174630528.MP.jpg" alt="Bild 2" onclick="openLightbox(this.src, this.alt)">
+    <img class="fullwidth-img" src="assets/img/PXL_20260624_174637085.MP.jpg" alt="Bild 3" onclick="openLightbox(this.src, this.alt)">
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Schließen">✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer class="site-footer">
+    <p>Profilkurs Mathematik · Toni-Sender-Oberstufe Frankfurt · 2025/26</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    function openLightbox(src, alt) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt;
+      document.getElementById('lightbox').classList.add('is-open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('is-open');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

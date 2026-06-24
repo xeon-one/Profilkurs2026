@@ -89,6 +89,13 @@
       border: none;
     }
 
+    #map-popup-img {
+      display: none;
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+    }
+
     .data-map-hint {
       text-align: center;
       font-size: 13px;
@@ -135,7 +142,7 @@
         <li><a href="index.html">Projekt</a></li>
         <li><a href="stationen.html">Stationen</a></li>
         <li><a href="daten.html">Daten</a></li>
-        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="produkte.html">Produkte</a></li>
         <li><a href="fazit.html">Fazit</a></li>
         <li><a href="slideshow.html">Slideshow</a></li>
       </ul>
@@ -163,6 +170,7 @@
         <div id="map-popup">
           <button id="map-popup-close" aria-label="Schließen">×</button>
           <iframe id="map-popup-frame" title=""></iframe>
+          <img id="map-popup-img" src="" alt="">
         </div>
       </div>
     </div>
@@ -226,7 +234,11 @@
       643: { name: 'Russland',    popupFile: 'laender/russland.html' },
       50:  { name: 'Bangladesch', popupFile: 'laender/bangladesch.html' },
       710: { name: 'Südafrika',   popupFile: 'laender/suedafrika.html' },
-      484: { name: 'Mexiko',      popupFile: 'laender/mexiko.html' }
+      484: { name: 'Mexiko',      popupFile: 'laender/mexiko.html' },
+      4:   { name: 'Afghanistan', image: 'assets/img/PXL_20260624_174618575.MP.jpg' },
+      586: { name: 'Pakistan',    image: 'assets/img/PXL_20260624_174630528.MP.jpg' },
+      144: { name: 'Sri Lanka',   image: 'assets/img/PXL_20260624_174630528.MP.jpg' },
+      356: { name: 'Indien',      image: 'assets/img/PXL_20260624_174637085.MP.jpg' }
     };
     const targetIds = new Set(Object.keys(laenderData).map(Number));
 
@@ -239,11 +251,23 @@
 
     const overlay = document.getElementById('map-overlay');
     const popupFrame = document.getElementById('map-popup-frame');
+    const popupImg = document.getElementById('map-popup-img');
     const closeBtn = document.getElementById('map-popup-close');
 
     function openPopup(info) {
-      popupFrame.src = info.popupFile;
-      popupFrame.title = info.name;
+      if (info.image) {
+        popupFrame.style.display = 'none';
+        popupFrame.src = '';
+        popupImg.src = info.image;
+        popupImg.alt = info.name;
+        popupImg.style.display = 'block';
+      } else {
+        popupImg.style.display = 'none';
+        popupImg.src = '';
+        popupFrame.style.display = 'block';
+        popupFrame.src = info.popupFile;
+        popupFrame.title = info.name;
+      }
       overlay.classList.add('visible');
     }
 
