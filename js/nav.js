@@ -9,6 +9,18 @@
   });
 })();
 
+/* Hamburger-Menü */
+(function () {
+  const toggle = document.querySelector('.site-nav__toggle');
+  const nav    = document.querySelector('.site-nav');
+  if (!toggle) return;
+  toggle.addEventListener('click', function () {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.textContent = open ? '✕' : '☰';
+  });
+})();
+
 /* Automatische Orientierungserkennung für .photo-grid */
 (function () {
   function classifyImage(img) {

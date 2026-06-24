@@ -130,6 +130,7 @@
   <nav class="site-nav" aria-label="Hauptnavigation">
     <div class="site-nav__inner">
       <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <button class="site-nav__toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
       <ul class="site-nav__links">
         <li><a href="index.html">Projekt</a></li>
         <li><a href="stationen.html">Stationen</a></li>
@@ -171,25 +172,27 @@
     <h2>⚖️ Ländervergleich: Bangladesh | Mexiko | Deutschland</h2>
     <p class="lead">Direkte Gegenüberstellung der wichtigsten Klimaindikatoren</p>
 
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Indikator</th>
-          <th>🇧🇩 Bangladesh</th>
-          <th>🇲🇽 Mexiko</th>
-          <th>🇩🇪 Deutschland</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Einwohner</td><td>ca. 170 Mio.</td><td>ca. 130 Mio.</td><td>ca. 84 Mio.</td></tr>
-        <tr><td>Temp.-Anomalie (2023)</td><td>+1,8 °C</td><td>+1,8 °C</td><td>+2,5 °C</td></tr>
-        <tr><td>Gesamt-CO₂/Jahr</td><td>~125 Mio. t</td><td>~435 Mio. t</td><td>~580 Mio. t</td></tr>
-        <tr><td>CO₂ pro Kopf</td><td>~0,7 t / Person</td><td>~3,3 t / Person</td><td>~7 t / Person</td></tr>
-        <tr><td>Hauptgefahr</td><td>Zyklone, Überschwemmungen</td><td>Hurrikane, Dürren</td><td>Hitzewellen, Hochwasser</td></tr>
-        <tr><td>Klimavulnerabilität</td><td>Sehr hoch</td><td>Hoch</td><td>Mittel</td></tr>
-        <tr><td>Anteil glob. Emissionen</td><td>&lt;1 %</td><td>ca. 1,1 %</td><td>ca. 1,5 %</td></tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Indikator</th>
+            <th>🇧🇩 Bangladesh</th>
+            <th>🇲🇽 Mexiko</th>
+            <th>🇩🇪 Deutschland</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Einwohner</td><td>ca. 170 Mio.</td><td>ca. 130 Mio.</td><td>ca. 84 Mio.</td></tr>
+          <tr><td>Temp.-Anomalie (2023)</td><td>+1,8 °C</td><td>+1,8 °C</td><td>+2,5 °C</td></tr>
+          <tr><td>Gesamt-CO₂/Jahr</td><td>~125 Mio. t</td><td>~435 Mio. t</td><td>~580 Mio. t</td></tr>
+          <tr><td>CO₂ pro Kopf</td><td>~0,7 t / Person</td><td>~3,3 t / Person</td><td>~7 t / Person</td></tr>
+          <tr><td>Hauptgefahr</td><td>Zyklone, Überschwemmungen</td><td>Hurrikane, Dürren</td><td>Hitzewellen, Hochwasser</td></tr>
+          <tr><td>Klimavulnerabilität</td><td>Sehr hoch</td><td>Hoch</td><td>Mittel</td></tr>
+          <tr><td>Anteil glob. Emissionen</td><td>&lt;1 %</td><td>ca. 1,1 %</td><td>ca. 1,5 %</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <h3>Fazit: Klimagerechtigkeit im globalen Kontext</h3>
     <ul class="popup-list">
