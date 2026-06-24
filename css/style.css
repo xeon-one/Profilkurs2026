@@ -253,9 +253,10 @@ figure.photo {
 
 figure.photo img {
   display: block;
-  width: 100%;
-  max-height: 440px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
   border-radius: var(--radius);
 }
 
@@ -279,8 +280,10 @@ figure.photo-pair figcaption {
 }
 
 .photo-grid img {
-  height: 220px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
 }
 
 figure.photo-pair {
@@ -295,9 +298,10 @@ figure.photo-pair {
 
 .photo-pair__imgs img {
   display: block;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
   border-radius: var(--radius);
 }
 
@@ -314,10 +318,9 @@ figure.photo-pair {
 .photo-pair__legend strong { color: var(--col-nav); }
 
 @media (max-width: 620px) {
-  .photo-grid img { height: 180px; }
+  .photo-grid img { height: auto; }
   .photo-pair__imgs { grid-template-columns: 1fr; }
   .photo-pair__legend { columns: 1; }
-  figure.photo img { max-height: 300px; }
 }
 
 /* --- Zitat-Block ------------------------------------------- */
