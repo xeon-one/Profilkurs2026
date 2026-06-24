@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow – Klimawandel & Klimagerechtigkeit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      margin: 1.5rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">Klimawandel &amp; Klimagerechtigkeit</a>
+      <button class="site-nav__toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Projekt</a></li>
+        <li><a href="stationen.html">Stationen</a></li>
+        <li><a href="daten.html">Daten</a></li>
+        <li><a href="kampagne.html">Kampagne</a></li>
+        <li><a href="fazit.html">Fazit</a></li>
+        <li><a href="slideshow.html">Slideshow</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-header__eyebrow">Präsentation</p>
+    <h1 class="page-header__title">Unsere Slideshow</h1>
+    <p class="page-header__subtitle">Die Präsentation unseres Profilkurses zu Klimawandel und Klimagerechtigkeit.</p>
+  </header>
+
+  <main class="page-content">
+
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.canva.com/design/DAHNd9Jlso8/watch?embed"
+        allowfullscreen="allowfullscreen"
+        allow="fullscreen"
+        title="Slideshow – Klimawandel & Klimagerechtigkeit">
+      </iframe>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Profilkurs Mathematik · Toni-Sender-Oberstufe Frankfurt · 2025/26</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

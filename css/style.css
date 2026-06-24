@@ -90,6 +90,30 @@ body {
   background: var(--col-nav-hover);
 }
 
+.site-nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.75rem 0.25rem;
+  line-height: 1;
+  margin-left: auto;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0 1.5rem;
+  border-radius: var(--radius);
+}
+
+.table-scroll .data-table {
+  margin: 0;
+  min-width: 500px;
+}
+
 /* --- Page header (pro Seite individuell) ------------------- */
 .page-header {
   background: var(--col-nav);
@@ -391,7 +415,20 @@ blockquote cite {
 /* --- Responsive -------------------------------------------- */
 @media (max-width: 600px) {
   .site-nav__brand { font-size: 13px; }
-  .site-nav__links a { padding: 0.75rem 0.6rem; font-size: 12px; }
+  .site-nav__toggle { display: block; }
+  .site-nav__inner { flex-wrap: wrap; }
+  .site-nav__links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
+  .site-nav.open .site-nav__links { display: flex; }
+  .site-nav__links a {
+    padding: 0.65rem 1.5rem;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
   .page-header { padding: 2rem 1rem 1.75rem; }
   .page-content { padding: 2rem 1rem 3rem; }
 }
